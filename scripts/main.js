@@ -13,6 +13,7 @@ const getAdvice = async function() {
         adviceID.innerHTML = `ADVICE #${data.id}`;
         adviceText.innerHTML = `“${data.advice}”`;
     } catch(error) {
+        adviceID.innerHTML = "ERROR";
         adviceText.innerHTML = "Sorry! Failed to fetch, Please try again later ...";
     } finally {
         adviceBtn.removeAttribute("disabled");
