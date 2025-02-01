@@ -27,7 +27,7 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 ### Built with
 
 - Semantic HTML5 markup
-- Tailwindcss
+- CSS
 - Flexbox
 - JavaScript
 
