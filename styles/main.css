@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "Manrope";
+    src: url(../assets/fonts/Manrope-ExtraBold.ttf) format(truetype);
+    font-weight: 800;
+    font-display: swap;
+}
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --neon-green-tint: hsla(150, 100%, 66%, 0.6);
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+    --black: hsla(0, 0%, 0%, 0.1);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Manrope";
+    font-size: 28px;
+    background-color: var(--dark-blue);
+}
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+}
+.advice-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    max-width: 540px;
+    background-color: var(--dark-grayish-blue);
+    text-align: center;
+    padding: 50px 46px;
+    border-radius: 14px;
+    box-shadow: 32px 32px 28px 6px var(--black);
+}
+.advice-id {
+    font-size: 13px;
+    color: var(--neon-green);
+    letter-spacing: 4px;
+}
+.advice-text {
+    color: var(--light-cyan);
+}
+.advice-btn {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+    background-color: var(--neon-green);
+    cursor: pointer;
+    margin-bottom: -80px;
+    transition: all 0.16s ease 50ms;
+}
+.advice-btn img {
+    width: 24px;
+    height: 24px;
+}
+.advice-btn:hover {
+    box-shadow: 0 0 40px 8px var(--neon-green-tint);
+}
+.advice-btn:disabled {
+    filter: saturate(0);
+    box-shadow: none;
+    cursor: auto;
+}
+.advice-divider {
+    width: 100%;
+}
+.advice-divider img {
+    width: inherit;
+}
+.title-hide {
+    display: none;
+}
+
+@media only screen and (max-width: 576px) {
+    .advice-card {
+        padding-inline: 24px;
+        border-radius: 10px;
+    }
+    .advice-id {
+        font-size: 12px;
+    }
+    .advice-text {
+        font-size: 26px;
+    }
+}
